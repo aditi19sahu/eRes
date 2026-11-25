@@ -1,5 +1,5 @@
 # eRes
-My research on  Energy Resilience through Renewables, on how electrification and domestic clean power could reduce India’s exposure to oil shocks. It is a work in progress and under review, so its figures and conclusions may change.
+My research on Energy Resilience through Renewables, on how electrification and domestic clean power could reduce India’s exposure to oil shocks. It is a work in progress and under review, so its figures and conclusions may change.
 
 > **Status: work in progress · under review.** More analysis, data and detail are being added, and the figures and conclusions may change in later versions.
 
@@ -25,9 +25,10 @@ Here is a worked example. 1 GW of solar in India produces about 1.62 TWh a year.
  <img width="1280" height="680" alt="coal_average_cost" src="https://github.com/user-attachments/assets/1d8d5938-7fd3-4f43-9022-a02d8a2f6b98" />
 
 
-   *Figure 1. Average cost of coal electricity against plant load factor. The fuel cost per unit stays flat, but the average cost rises steeply as the plant runs less. Author's calculation based on Ember data.*
+   *Figure 1. Average cost of coal electricity against plant load factor. The fuel cost per unit stays flat, but the average cost rises steeply as the plant runs less. My calculation, based on Ember data.*
 4. **The outcome depends on how fast India builds.** In the scenario model, a high-ambition path cuts coal's share of electricity from 71% to about **15% by 2047**. Its average generation cost ends about **17% lower** than a stalled path. A stalled path would need roughly **150–600 GW of new coal** (central estimate about 380 GW).
 5. **The bottlenecks are the grid and manufacturing, not generation cost.** About 470 GWh of renewable power was curtailed in January–March 2026. India still imports about 100% of its polysilicon and 98% of its solar wafers.
+6. **Oil shocks barely reach consumer prices, because they are absorbed elsewhere.** About three-quarters of a crude price rise reaches wholesale fuel prices within seven months, but pump prices have not moved with crude since 2022 and headline inflation hardly changes (see below).
 
 ## Scenario model
 
@@ -45,28 +46,47 @@ These are projections that depend on the model's assumptions, not forecasts.
 <img width="1280" height="680" alt="coal_generation_scenarios" src="https://github.com/user-attachments/assets/57efe68f-f971-4570-a4e3-1512cc576f21" />
 
 
-*Figure 2. Coal electricity generation under the three scenarios. At today's pace coal generation roughly doubles by 2047; only the high-ambition path makes it decline. Author's scenario model.*
+*Figure 2. Coal electricity generation under the three scenarios. At today's pace coal generation roughly doubles by 2047; only the high-ambition path makes it decline. My scenario model.*
 
-## Oil → inflation regression (first results)
+## Oil → inflation regression (initial results)
 
-The white paper describes this study as *designed but not yet carried out*. Results are preliminary 
+When global oil prices rise, how much of the rise shows up in Indian prices, and how quickly? Economists call this share the **pass-through**. If electrification protects the economy, the pass-through should get smaller as more vehicles and households switch from oil to electricity. I have carried out the first round of this study; the results below are initial and may change as I refine the data and method.
 
-**Method.** Monthly data, Jan 2013 – Sep 2026. Each price index is regressed on the current and previous six months' changes in the rupee price of India's crude basket. The controls are past inflation, month effects and RBI repo-rate changes. The **sum of the oil coefficients** is the pass-through: the share of a crude-price change that reaches each price within seven months.
+**Method.** Monthly data, Jan 2013 – Sep 2026. Each price index is regressed on the current and previous six months' changes in the rupee price of India's crude basket. The controls are past inflation, month effects, RBI repo-rate changes and, in one version, food prices. The **sum of the oil coefficients** is the pass-through: the share of a crude-price change that reaches each price within seven months. A value of 1 means the whole rise is passed on; 0 means none of it is. I ran the same regression for each step between crude oil and the consumer.
 
+| Price | Pass-through | What it means |
+|---|---|---|
+| Wholesale petroleum products | **0.75** | About three-quarters of a crude price rise is passed on |
+| Wholesale prices, all goods | 0.09 | The rise is diluted across all wholesale goods |
+| Petrol and diesel at the pump (2014–25) | **0.22–0.24** | 0.20–0.27 before 2022; about 0 since 2022 |
+| Consumer fuel and light | 0.05 | Cooking gas, kerosene and electricity |
+| Core consumer prices (excluding food and fuel) | ≈ 0 | No sign yet of oil costs spreading to other prices |
+| Headline consumer inflation (food-controlled) | 0.006 | About 0.05 percentage points per 10% oil rise |
 
-**What this shows.** Oil shocks reach **wholesale** fuel prices almost fully. They reach **pump** prices only partly, and since 2022 not at all. Because petrol and diesel are only about 2.3% of the consumer basket, headline inflation barely moves. During the 2026 crisis, the cost was absorbed largely by state oil companies, through an excise-duty cut, and by businesses paying market prices for fuel. Consumer prices took little of it. This is lower than the RBI research estimate quoted in the paper (about 20 bps per 10%), which assumes the shock fully reaches retail fuel prices.
+*Table 4. Initial pass-through estimates: the share of a 1% rise in the rupee price of crude oil that reaches each price within seven months. My regression, January 2013 – September 2026.*
+
+<img width="1440" height="800" alt="oil_passthrough_ladder" src="https://github.com/user-attachments/assets/833c652a-e8ec-443d-aac2-b878a6284ba2" />
+
+*Figure 3. Initial pass-through estimates. Dots show my estimates and lines show 95% confidence intervals.*
+
+**What this shows.**
+- **Oil reaches wholesale prices almost fully.** About three-quarters of every rise in crude prices shows up in wholesale petroleum prices within seven months.
+- **Pump prices take only part of it, and since 2022 none of it.** Crude is only part of what a litre of petrol costs, and taxes are a fixed amount per litre, so even in normal times only about a fifth to a quarter of a crude price rise reached the pump. Pass-through to petrol was 0.20 when prices were revised every fortnight and 0.27 when they were revised daily, but about zero from 2022, when prices were held fixed.
+- **Consumer inflation barely moves.** Petrol and diesel are only about 2.3% of the consumer price basket, so a 10% rise in oil adds only about 0.05 percentage points to consumer prices. My headline estimate with food prices controlled for (0.006) matches this check.
+
+This is much lower than the RBI research estimate quoted in the paper (about 0.20 percentage points per 10% rise), which assumes the shock fully reaches retail fuel prices. It also changes how I read the 2026 crisis: pump prices did not change until mid-May, and about three-quarters of the rise in inflation between February and May came from food prices. The oil shock did not disappear, though. It was absorbed by the state oil companies, by an excise-duty cut and by businesses paying market prices for fuel. In September 2026 wholesale inflation was **11.39%** while consumer inflation was **5.54%**.
 
 **Data.** Every series was checked against published figures, for example CPI inflation of 5.54% and WPI inflation of 11.39% in September 2026, and RBI's core inflation of 4.2% in August 2026. Sources:
 - **Prices:** MoSPI CPI and WPI.
 - **Repo rate:** RBI Handbook of Statistics, Table 40.
 - **Crude and exchange rate:** FRED (IMF/EIA crude, INR/USD) and PPAC (Indian crude basket).
 
-
+**Limits.** Before 2026 I approximated India's crude basket with Dated Brent, which matches PPAC's official yearly averages to within about 2.5%. My petrol and diesel price series end in December 2025.
 
 ## Next steps (being worked on)
-- Oil → inflation regression
-- Further Grid Analaysis
+- Oil → inflation: the electric-vehicle test. Adding a Δoil × EV-share term (using VAHAN registrations) to see whether oil's effect on prices is shrinking as EVs spread
+- Further Grid Analysis
 
 ## Main sources
 
-Ember (2026) on India's transition, coal costs and transmission. MoSPI *Energy Statistics India 2026*. CREA (2026) on the cost of the Hormuz crisis. RBI Bulletin (Jul 2025) on oil and inflation. PIB (2026) on solar manufacturing. CERC (2025) on grid frequency. The full reference list is in the white paper.
+Ember (2026) on India's transition, coal costs and transmission. MoSPI *Energy Statistics India 2026*. CREA (2026) on the cost of the Hormuz crisis. RBI Bulletin (Jul 2025) on oil and inflation. PIB (2026) on solar manufacturing. CERC (2025) on grid frequency. MoSPI CPI and WPI data, RBI Handbook of Statistics, FRED and PPAC for the regression. The full reference list is in the white paper.
