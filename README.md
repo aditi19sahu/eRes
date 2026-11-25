@@ -23,9 +23,8 @@ Here is a worked example. 1 GW of solar in India produces about 1.62 TWh a year.
 3. **Coal gets more expensive as it runs less.** A coal plant's average cost per unit is a hyperbola in its utilisation: `AC = v + F / (8,760 × PLF)`. At 69% utilisation coal costs about ₹4.80/kWh. At 55% it rises to ₹5.28, and at 40% to ₹6.18.
 
  <img width="1280" height="680" alt="coal_average_cost" src="https://github.com/user-attachments/assets/1d8d5938-7fd3-4f43-9022-a02d8a2f6b98" />
-
-
    *Figure 1. Average cost of coal electricity against plant load factor. The fuel cost per unit stays flat, but the average cost rises steeply as the plant runs less. My calculation, based on Ember data.*
+   
 4. **The outcome depends on how fast India builds.** In the scenario model, a high-ambition path cuts coal's share of electricity from 71% to about **15% by 2047**. Its average generation cost ends about **17% lower** than a stalled path. A stalled path would need roughly **150–600 GW of new coal** (central estimate about 380 GW).
 5. **The bottlenecks are the grid and manufacturing, not generation cost.** About 470 GWh of renewable power was curtailed in January–March 2026. India still imports about 100% of its polysilicon and 98% of its solar wafers.
 6. **Oil shocks barely reach consumer prices, because they are absorbed elsewhere.** About three-quarters of a crude price rise reaches wholesale fuel prices within seven months, but pump prices have not moved with crude since 2022 and headline inflation hardly changes (see below).
